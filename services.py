@@ -1,4 +1,4 @@
-from models import UserModel
+from models2 import UserModel
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import create_access_token
 
@@ -17,10 +17,11 @@ class UserService:
         self.db.session.add(user)
         self.db.session.commit()
         return user
+    
 
     def authenticate_user(self, username, password):
         user = UserModel.query.filter_by(username=username).first()
         if user and self.bcrypt.check_password_hash(user.password, password):
             token = create_access_token(identity=user.id)
-            return token
+            return True
         return None
