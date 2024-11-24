@@ -29,4 +29,23 @@ cd python main.py
 - If successful, return code 200 and the token.
 - If not, return code 400 and message "Invalid credentials"
 
+#Creating a new video
+- Method: POST
+- URL: http://127.0.0.1:5000/video
+- Authorization: Basic Auth:
+Username: satyabudi
+Password: 1l0v3c0d1ng
+- Content-Type: application/json
+- Body (raw):
+  {
+  "name": "My First Video",
+  "views": 100,
+  "likes": 10
+}
+- If successful, return code 201 and a video id.
+- If not, return code 400 and message "Missing required fields"
+
+#Retrieving a video
+- 
+
   
