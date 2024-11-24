@@ -46,6 +46,8 @@ Password: 1l0v3c0d1ng
 - If not, return code 400 and message "Missing required fields"
 
 #Retrieving a video
-- 
+- Method: GET
+- http://127.0.0.1:5000/video/1
+
 
   
